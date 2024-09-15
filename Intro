@@ -1,3 +1,12 @@
 POWER BI
   1)Power BI Desktop=>To create reports
-  2)Power BI Service=>To share and collobarate, this is on cloud
+  2)Power BI Service(SaaS)=>To share and collobarate, this is on cloud
+  3)Power BI Mobile Apps=> can view the reports only, no editing
+Power BI Desktop
+   -> Get Data -> Analyse -> Visualize -> Publish -> Collaborate
+  Power Query Editor --> called as Heart Of Power BI
+     where we can add or merge queries(files or sources) used for transformation like cleaning, shaping, combining various sources
+        -- Data Profiling Tools include i)Column Quality ii)Column Distribution iii)Column Profile
+        -- Group By Dialog -> usage group by dialog may be slow bi as it consumes space , so directly through visualiztions we can do it.
+        -- Applied Steps -> any changes done are logged or noted in this, rename the steps helps a  lot to identify
+        -- Appending(adding rows to existing columns) & Merging(combining 2 tables based on similiar condition) 
