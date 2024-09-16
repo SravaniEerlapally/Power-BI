@@ -10,3 +10,13 @@ Power BI Desktop
         -- Group By Dialog -> usage group by dialog may be slow bi as it consumes space , so directly through visualiztions we can do it.
         -- Applied Steps -> any changes done are logged or noted in this, rename the steps helps a  lot to identify
         -- Appending(adding rows to existing columns) & Merging(combining 2 tables based on similiar condition) 
+  DAX(Data Analysis Expressions)
+        2 Business Logics
+         ....Measures(value->gives 1  like sum(col))
+         ....Calculated Columns(adding column for each row)
+       Implicit Measures==> if we use a calculated column as value/result,it creates an implicit measure
+       DAX :::: is all about Data Analysis Expressions and Aggregation/Filtering 
+                 Aggregation :::>combining group of values into a single value.  Eg:Sum, Avg, Max, Min, Distinct Count
+                       (Always validate your aggreated in excel or sql)
+                             :::>Date Functions
+                 
