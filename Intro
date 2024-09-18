@@ -35,3 +35,14 @@ Power BI Desktop
                                   2Q) Find the total_monthly_charges by gender female by Filter Fn
                                         Calculate(Sum(TableName[Monthly_charges]),Filter(TableName,TableName[Gender]=='male'
                       If Else and Nested If:
+                              1st Way by DAX==>recommended in this way only
+                                  To add any bins or groups and mention as other ref we use if else if..
+                                  We create a table view with some required columns and add a new calculated column withh if condition
+                                   If-else     =If(TableName[Age]<18,"Not Eligible","Eligible")
+                                   If-else-if  =If(TableName[Age]<=19,"Teen",If(TableName[Age]<=50,"Adults","Old"))
+                              2nd Way by power query Editor
+                                  Transform data > Add Column > Conditional Column
+                      Time Intelligence Functions:
+                          enables users to manipulate data using time periods such as years, quarters, months, days
+                              .....>YTD,MTD
+                           
