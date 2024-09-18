@@ -12,11 +12,26 @@ Power BI Desktop
         -- Appending(adding rows to existing columns) & Merging(combining 2 tables based on similiar condition) 
   DAX(Data Analysis Expressions)
         2 Business Logics
-         ....Measures(value->gives 1  like sum(col))
-         ....Calculated Columns(adding column for each row)
+         ....Measures(value->gives 1  like sum(col))==>created on tabular basis entire table
+         ....Calculated Columns(adding column for each row)==>calculated columns calculated on row level
+             2 Contexts
+                i)Row Contexts is related to calculated columns ii)Filter Contexts is related to measures
        Implicit Measures==> if we use a calculated column as value/result,it creates an implicit measure
        DAX :::: is all about Data Analysis Expressions and Aggregation/Filtering 
                  Aggregation :::>combining group of values into a single value.  Eg:Sum, Avg, Max, Min, Distinct Count
                        (Always validate your aggreated in excel or sql)
-                             :::>Date Functions
-                 
+                             :::>Date Functions ---DateDiff,AddDate
+                             :::>CalenderFunctions->create a table with one column range b/w 2 dates
+                                    NewTable = Calender(Date(1949,1,1),Date(1950,12,31)
+                                    YearNumber = Year(NewTable[Date])
+                                    MonthNumber = Month(NewTable[Date])
+                                    MonthName = Format(NewTable[Date],'MMM')
+                                    DayOfWeek = WeekDay(NewTable[Date])
+                         Imp Dax Fn :::>Calculate & Filter
+                                  By creating new measures we can find total_monthly_charges by gender male or female in 2 ways: Calculate alone & Calculate + Filter  
+                                  1Q) Find the total_monthly_charges by gender male by Calculate Fn
+                                       Calculate(Sum(TableName[Monthly_charges]),TableName[Gender]=='male')
+                                       Calculate Fn can be used for same table filtering whereas for diff tables grouping it doesn't work then we use filter where both table are linked each by primary key.
+                                  2Q) Find the total_monthly_charges by gender female by Filter Fn
+                                        Calculate(Sum(TableName[Monthly_charges]),Filter(TableName,TableName[Gender]=='male'
+                      If Else and Nested If:
